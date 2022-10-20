@@ -16,13 +16,13 @@ public class NewController {
 	@Autowired
 	BookService bkService;
 	
-	// Method to get the list of books
 	@GetMapping("/books")
 	public String getBooks(Model model) {
 		model.addAttribute("books", bkService.getBooks());
 		return "books";
 	}
 	
+	// Method to redirect to add book page
 	@GetMapping("/add-book-page")
 	public String goToAddBook(Model model) {
 		Book book = new Book();
