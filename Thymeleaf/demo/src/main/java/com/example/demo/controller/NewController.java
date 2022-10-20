@@ -16,6 +16,7 @@ public class NewController {
 	@Autowired
 	BookService bkService;
 	
+	// Method to get the list of books
 	@GetMapping("/books")
 	public String getBooks(Model model) {
 		model.addAttribute("books", bkService.getBooks());
